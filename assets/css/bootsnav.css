@@ -1311,6 +1311,10 @@ nav.navbar.bootsnav {
   nav.navbar.bootsnav.navbar-fixed .logo-scrolled {
     display: block;
   }
+  #filter{
+    filter:brightness(1000%);
+  }
+  
 
   .attr-nav > ul > li.dropdown ul.dropdown-menu {
     margin-top: 0;

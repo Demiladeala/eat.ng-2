@@ -4393,6 +4393,7 @@ footer .f-item h4 {
 
 footer .f-item > img {
   margin-bottom: 30px;
+  filter:brightness(1000%);
 }
 
 footer .f-item.inst-feed ul {
@@ -4617,6 +4618,7 @@ footer .item-center > ul li a {
 
 footer .item-center img {
   margin-bottom: 30px;
+  filter:brightness(1000%);
 }
 
 footer .item-center > ul {

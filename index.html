@@ -6,13 +6,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Rescaf - Food & Restauratn Template">
+    <meta name="description" content="Eat.ng">
 
     <!-- ========== Page Title ========== -->
-    <title>Rescaf - Food & Restauratn Template</title>
+    <title>Eat.ng</title>
 
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon"> -->
 
     <!-- ========== Start Stylesheet ========== -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -63,7 +63,7 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo-light.png" class="logo logo-display" alt="Logo">
+                        <img src="assets/img/logo-light.png" id="filter" class="logo logo-display" alt="Logo">
                         <img src="assets/img/logo.png" class="logo logo-scrolled" alt="Logo">
                     </a>
                 </div>
@@ -74,54 +74,21 @@
                     <ul class="nav navbar-nav" data-in="#" data-out="#">
                         <li class="dropdown active">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Home</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="index.html">Home Version One</a></li>
-                                <li><a href="index-2.html">Home Version Two</a></li>
-                                <li><a href="index-3.html">Home Version Three</a></li>
-                                <li><a href="index-4.html">Home Version Four</a></li>
-                                <li><a href="index-5.html">Home Version Five</a></li>
-                                <li><a href="index-6.html">Home Version Six</a></li>
-                                <li><a href="index-op.html">Onepaeg Version One</a></li>
-                                <li><a href="index-op-2.html">Onepaeg Version Two</a></li>
-                                <li><a href="index-op-3.html">Onepaeg Version Three</a></li>
-                                <li><a href="index-op-4.html">Onepaeg Version Four</a></li>
-                            </ul>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >Pages</a>
                             <ul class="dropdown-menu">
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >About</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="about.html">Version One</a></li>
-                                        <li><a href="about-2.html">Version Two</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="chef.html">Chef</a></li>
+                                <li><a href="about.html" >About</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                                 <li><a href="404.html">Error Page</a></li>
                             </ul>
                         </li>
                         <li><a href="reservation.html">Reservation</a></li> 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >Menus</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="menu-1.html">Version One</a></li>
-                                <li><a href="menu-2.html">Version Two</a></li>
-                                <li><a href="menu-3.html">Version Three</a></li>
-                                <li><a href="menu-4.html">Version Four</a></li>
-                            </ul>
+                            <a href="menu.html" class="dropdown-toggle active" data-toggle="dropdown" >Menu</a>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Blog</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-standard.html">Blog Standard</a></li>
-                                <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                <li><a href="blog-single.html">Blog Single Standard</a></li>
-                                <li><a href="blog-single-left-sidebar.html">Single Left Sidebar</a></li>
-                                <li><a href="blog-single-right-sidebar.html">Single Right Sidebar</a></li>
-                            </ul>
+                            <a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" >Blog</a>
                         </li>
                         <li>
                             <a href="contact.html">contact</a>
@@ -172,15 +139,35 @@
         <div id="bootcarousel" class="carousel slide animate_text" data-ride="carousel">
             <!-- Wrapper for slides -->
             <div class="carousel-inner transparent-nav heading-uppercase text-dark">
-                <div class="item active bg-cover" style="background-image: url(assets/img/2440x1578.png);">
+                <div class="item active bg-cover" style="background-image: url(assets/img/hero-1.jpg)">
                     <div class="box-table shadow dark">
                         <div class="box-cell">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-8 col-md-offset-2">
                                         <div class="content">
-                                            <h2 data-animation="animated fadeInUp">Burger</h2>
-                                            <h1 data-animation="animated fadeInDown">Awesome delicious food</h1>
+                                            <!-- <h2 data-animation="animated fadeInUp">Burger</h2> -->
+                                            <h1 data-animation="animated fadeInDown">The Perfect Space to Enjoy Fantastic Food</h1>
+                                            <p data-animation="animated slideInUp">
+                                                Festive dining at Farthings where we are strong believers in using the very best produce
+                                            </p>
+                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#">Order Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item bg-cover" style="background-image: url(assets/img/hero-2.jpg);">
+                    <div class="box-table shadow dark">
+                        <div class="box-cell">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <div class="content">
+                                            <h2 data-animation="animated fadeInUp">don't miss this deal</h2>
+                                            <h1 data-animation="animated fadeInDown">delicious hot pizza</h1>
                                             <p data-animation="animated slideInUp">
                                                 Stronger unpacked felicity to of mistaken. Fanny at wrong table ye in. Be on easily cannot innate in lasted months on. Differed and and felicity steepest mrs age outweigh.
                                             </p>
@@ -192,35 +179,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="item bg-cover" style="background-image: url(assets/img/2440x1578.png);">
+                <div class="item bg-cover" style="background-image: url(assets/img/hero-3.jpg);">
                     <div class="box-table shadow dark">
                         <div class="box-cell">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-8 col-md-offset-2">
                                         <div class="content">
-                                            <h2 data-animation="animated fadeInUp">Pizza</h2>
-                                            <h1 data-animation="animated fadeInDown">Awesome delicious food</h1>
-                                            <p data-animation="animated slideInUp">
-                                                Stronger unpacked felicity to of mistaken. Fanny at wrong table ye in. Be on easily cannot innate in lasted months on. Differed and and felicity steepest mrs age outweigh.
-                                            </p>
-                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#">Order Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item bg-cover" style="background-image: url(assets/img/2440x1578.png);">
-                    <div class="box-table shadow dark">
-                        <div class="box-cell">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8 col-md-offset-2">
-                                        <div class="content">
-                                            <h2 data-animation="animated fadeInUp">Sandwich</h2>
-                                            <h1 data-animation="animated fadeInDown">Awesome delicious food</h1>
+                                            <h2 data-animation="animated fadeInUp">limited time offer</h2>
+                                            <h1 data-animation="animated fadeInDown">grilled cheese burger</h1>
                                             <p data-animation="animated slideInUp">
                                                 Stronger unpacked felicity to of mistaken. Fanny at wrong table ye in. Be on easily cannot innate in lasted months on. Differed and and felicity steepest mrs age outweigh.
                                             </p>
@@ -264,7 +231,7 @@
                         <p>
                             Making a reservation at Délicious restaurant is easy and takes just a couple of minutes.
                         </p>
-                        <h2>+123 456 7890</h2>
+                        <h2>+234 123 456 789</h2>
                     </div>
                 </div>
                 <div class="col-md-4 single-item">
@@ -904,16 +871,16 @@
                     <div class="col-md-6 col-md-offset-3 item-center text-center">
                         <a href="#"><img src="assets/img/logo-light.png" alt="Logo"></a>
                         <p>
-                            (French Cafe/Bistrot) 840, South Spring Street, Los Angeles.
+                            Crystal Land, Area 11, Abuja.
                         </p>
                         <ul>
                             <li>
                                 <i class="fas fa-phone"></i>
-                                +123 456 7890
+                                +234 123 456 789
                             </li>
                             <li>
                                 <i class="fas fa-envelope-open"></i>
-                                <a href="mailto:support@validtheme.com">support@validtheme.com</a>
+                                <a href="mailto:Eat-ng.com">support@Eat-ng.com</a>
                             </li>
                         </ul>
                         <div class="social">
