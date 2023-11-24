@@ -1080,6 +1080,9 @@ body,
  .banner-area .item h6:nth-child(2) {
   animation-delay: .7s;
 }
+#home-landing-image{
+  background-image: url(/assets/img/hero-2.jpeg);
+}
 
 .carousel-caption h1:nth-child(3), 
  .carousel-caption h2:nth-child(3), 
@@ -4833,4 +4836,10 @@ footer.shadow .footer-bottom {
   z-index: 999999;
   background: url(assets/img/preloader.gif) center no-repeat #fff;
   text-align: center;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  #home-landing-image{
+    background-image: url(/assets/img/hero-2b.jpeg);
+  }
 }
