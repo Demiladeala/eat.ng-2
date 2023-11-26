@@ -4837,9 +4837,3 @@ footer.shadow .footer-bottom {
   background: url(assets/img/preloader.gif) center no-repeat #fff;
   text-align: center;
 }
-
-@media only screen and (min-width: 300px) and (max-width: 767px) {
-  #home-landing-image{
-    background-image: url(/assets/img/hero-2b.jpeg);
-  }
-}
