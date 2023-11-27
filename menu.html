@@ -16,6 +16,7 @@
 
     <!-- ========== Start Stylesheet ========== -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
     <link href="assets/css/flaticon-set.css" rel="stylesheet" />
     <link href="assets/css/magnific-popup.css" rel="stylesheet" />
@@ -120,9 +121,9 @@
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
-                        <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="cart"><a href="#"><i class="fa fa-shopping-bag"></i></a></li>
-                        <li class="side-menu"><a href="#"><i class="fas fa-store"></i></a></li>
+                        <li class="search"><a href="#"><i class="bi bi-search"></i></a></li>
+                        <li class="side-cart custom-offcanvas-button"><a href="#"><i style="color: black;" class="bi bi-bag"></i></a></li>
+                        <li class="side-menu"><a href="#"><i class="bi bi-shop"></i></a></li>
                     </ul>
                 </div>        
                 <!-- End Atribute Navigation -->
@@ -216,10 +217,32 @@
             </div>
             <!-- End Side Menu -->
 
+            <!-- Start Cart Menu -->
+            <div class="overlay">
+                <div class="custom-offcanvas" id="customOffcanvas">
+                    <div class="cart-item-container align-items-center" style="align-items: center;">
+                        <div>
+                            <h4 class="title">Cart</h4>
+                        </div>
+                        <div onclick="closeCustomOffcanvas()">
+                            <a href="#" class="close-cart"><i class="fa fa-times" style="color: #f44336;"></i></a>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <!-- Offcanvas content goes here -->
+                        <div style="display: flex; justify-content:center; align-items:center">
+                            <img src="assets/img/cart-empty.png" alt="">
+                        </div>
+                        <p style="text-align: center;">Your cart is empty! <br>Add items to get started</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Cart Menu -->
+
         </nav>
         <!-- End Navigation -->
 
-    </header>
+    </header>   
     <!-- End Header -->
 
     <!-- Start Breadcrumb 

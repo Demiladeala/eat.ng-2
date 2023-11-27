@@ -1,11 +1,3 @@
-/* ===================================================================
-    
-    Author          : Valid Theme
-    Template Name   : Rescaf - Food & Restauratn Template
-    Version         : 1.1
-    
-* ================================================================= */
-
 (function($) {
     "use strict";
 
@@ -357,3 +349,14 @@
 
     }); // end document ready function
 })(jQuery); // End jQuery
+// JavaScript to toggle the car
+$(document).ready(function () {
+    $('.side-cart').on('click', function () {
+        $('#customOffcanvas, .overlay').toggleClass('show');
+    });
+});
+
+// JavaScript to close the cart
+function closeCustomOffcanvas() {
+    $('#customOffcanvas, .overlay').removeClass('show');
+}

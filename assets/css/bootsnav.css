@@ -622,7 +622,7 @@ body.on-side .body-overlay {
   top: 0;
 }
 
-.side .close-side {
+.side .close-side, .close-cart {
   border-radius: 50%;
   color: #f44336;
   float: right;
@@ -632,7 +632,7 @@ body.on-side .body-overlay {
   line-height: 38px;
   position: relative;
   text-align: center;
-  top: -30px;
+  top: -9px;
   width: 40px;
   z-index: 2;
 }

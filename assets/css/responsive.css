@@ -421,9 +421,13 @@
     display: none;
   }
 
-  .side {
+  .side{
     padding: 50px 50px 50px 35px;
     width: 350px;
+  }
+  .custom-offcanvas{
+    padding: 15px;
+    width: 100%;
   }
 
   /* Container Full */
@@ -950,9 +954,13 @@
 /* Wide Mobile Layout: 480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
-  .side {
+  .side{
     padding: 50px;
     width: 400px;
+  }
+  .custom-offcanvas{
+    padding: 15px;
+    width: 100%;
   }
 }
 
