@@ -71,6 +71,10 @@ nav.navbar .quote-btn .home-quote-btn {
   font-weight: 600;
   text-transform: uppercase;
 }
+/* nav.navbar .quote-btn .home-quote-btn:hover {
+  background-color: #333333;
+  background: white;
+} */
 
 nav.navbar .quote-btn {
   margin-top: -4px;
