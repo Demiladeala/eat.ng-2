@@ -360,3 +360,17 @@ $(document).ready(function () {
 function closeCustomOffcanvas() {
     $('#customOffcanvas, .overlay').removeClass('show');
 }
+// When the window y scroll > 32, add a class to the <a> tag in <li> with class "quote-button"
+var getQuoteButton = document.querySelector('.quote-btn a');
+
+if (getQuoteButton) {
+    window.addEventListener("scroll", function () {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+        
+        if (scrollTop > 32) {
+            getQuoteButton.id = "home-quote-btn-color";
+        } else {
+            getQuoteButton.removeAttribute("id");
+        }
+    });
+}

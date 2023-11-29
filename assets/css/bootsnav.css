@@ -61,6 +61,16 @@ nav.navbar .quote-btn a {
   font-weight: 600;
   text-transform: uppercase;
 }
+nav.navbar .quote-btn .home-quote-btn {
+  background: transparent none repeat scroll 0 0;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 
 nav.navbar .quote-btn {
   margin-top: -4px;
@@ -2054,6 +2064,7 @@ nav.navbar.bootsnav {
   .attr-nav {
     position: absolute;
     right: 60px;
+    top:-7px;
   }
 
   .attr-nav > ul {

@@ -696,6 +696,7 @@ nav.bootsnav.navbar-default.info-topbar.active-full ul li a {
   padding: 35px 20px;
 }
 
+
 .attr-nav > a.btn-theme.effect:hover, 
 .attr-nav > a.btn-theme.effect, 
 .attr-nav > a.btn-theme.effect:focus {
@@ -703,7 +704,10 @@ nav.bootsnav.navbar-default.info-topbar.active-full ul li a {
   border: 2px solid #e7272d;
   color: #ffffff !important;
 }
-
+#home-quote-btn-color {
+  color: #333333;
+  border: solid 1px #333333;
+}
 nav.bootsnav.navbar-default.info-topbar.sticked ul li a {
   margin-right: 30px;
   padding: 35px 0;

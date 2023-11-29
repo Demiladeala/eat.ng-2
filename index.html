@@ -16,6 +16,7 @@
 
     <!-- ========== Start Stylesheet ========== -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
     <link href="assets/css/flaticon-set.css" rel="stylesheet" />
     <link href="assets/css/magnific-popup.css" rel="stylesheet" />
@@ -52,11 +53,37 @@
     <header id="home">
 
         <!-- Start Navigation -->
-        <nav class="navbar navbar-default fixed-border navbar-fixed white no-background bootsnav brand-center center-side">
-
+        <nav class="navbar navbar-default fixed-border navbar-fixed white no-background bootsnav">
+            
+            <!-- Start Top Search -->
+            <div class="container">
+                <div class="row">
+                    <div class="top-search">
+                        <div class="input-group">
+                            <form action="#">
+                                <input type="text" name="text" class="form-control" placeholder="Search">
+                                <button type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>  
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Search -->
+            
             <div class="container">
 
-
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="search"><a href="#"><i class="bi bi-search"></i></a></li>
+                        <li class="side-cart"><a href="#"><i class="bi bi-bag"></i></a></li>
+                        <li class="quote-btn"><a href="#" class="home-quote-btn">Book a table</a></li>
+                    </ul>
+                </div>        
+                <!-- End Atribute Navigation -->
+                
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
@@ -71,9 +98,9 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav" data-in="#" data-out="#">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
                         <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Home</a>
+                            <a href="#">Home</a>
                         </li>
                         <li>
                             <a href="about.html">About</a>
@@ -88,11 +115,15 @@
                             <a href="menu.html">Menu</a>
                         </li>
                         <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
                             <a href="blog.html">Blog</a>
                         </li>
                         <li>
                             <a href="contact.html">contact</a>
                         </li>
+
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>
@@ -172,6 +203,7 @@
                                                 Choose your perfect meal combination with Jollof, Fried, or White Rice, served alongside your preferred stew and choice of chicken, beef , fish, goat meat or pork
                                             </p>
                                             <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#">Order Now</a>
+                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#">Make Reservation</a>
                                         </div>
                                     </div>
                                 </div>
@@ -222,7 +254,7 @@
 
     <!-- Start Basic Info 
     ============================================= -->
-    <div class="basic-info-area text-center default-padding">
+    <!-- <div class="basic-info-area text-center default-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 single-item">
@@ -253,7 +285,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Basic Info -->
 
     <!-- Start Popular Dishes
@@ -264,7 +296,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="site-heading text-center">
                         <h3>Discover</h3>
-                        <h2>Our specials</h2>
+                        <h2>Featured Dishes</h2>
                         <p>
                             Eat.ng offers fresh, delicious, authentic Nigerian and African food to the Capital District and provides a fun atmosphere that keeps bringing our customers back again and again.
                         </p>
@@ -391,8 +423,8 @@
                             <button class="active" data-filter="*">All</button>
                             <button data-filter=".breakfast">Breakfast</button>
                             <button data-filter=".rice">Rice</button>
-                            <button data-filter=".swallow">Swallow</button>
-                            <button data-filter=".special">Special</button>
+                            <button data-filter=".swallow">Local Dishes</button>
+                            <button data-filter=".special">International Dishes</button>
                             <!-- <button data-filter=".drinks">drinks</button> -->
                         </div>
                         <!-- End Mixitup Nav-->
