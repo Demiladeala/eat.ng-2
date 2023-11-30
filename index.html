@@ -79,7 +79,7 @@
                     <ul>
                         <li class="search"><a href="#"><i class="bi bi-search"></i></a></li>
                         <li class="side-cart"><a href="#"><i class="bi bi-bag"></i></a></li>
-                        <li class="quote-btn"><a href="#" class="home-quote-btn">Book a table</a></li>
+                        <li class="quote-btn home-quote-button"><a href="reservation.html" class="home-quote-btn">Book a table</a></li>
                     </ul>
                 </div>        
                 <!-- End Atribute Navigation -->
@@ -128,35 +128,28 @@
                 </div><!-- /.navbar-collapse -->
             </div>
 
-            <!-- Start Side Menu -->
-            <div class="side">
-                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
-                <div class="widget">
-                    <h4 class="title">About Us</h4>
-                    <p>
-                        Arrived compass prepare an on as. Reasonable particular on my it in sympathize. Size now easy eat hand how. Unwilling he departure elsewhere dejection at. Heart large seems may purse means few blind.
-                    </p>
-                </div>
-                <div class="widget">
-                    <h4 class="title">Additional Links</h4>
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register</a></li>
-                    </ul>
-                </div>
-                <div class="widget social">
-                    <h4 class="title">Connect With Us</h4>
-                    <ul class="link">
-                        <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li class="pinterest"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                        <li class="dribbble"><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                    </ul>
+            
+            <!-- Start Cart Menu -->
+            <div class="overlay">
+                <div class="custom-offcanvas" id="customOffcanvas">
+                    <div class="cart-item-container align-items-center" style="align-items: center;">
+                        <div>
+                            <h4 class="title">Cart</h4>
+                        </div>
+                        <div onclick="closeCustomOffcanvas()">
+                            <a href="#" class="close-cart"><i class="fa fa-times" style="color: #f44336;"></i></a>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <!-- Offcanvas content goes here -->
+                        <div style="display: flex; justify-content:center; align-items:center">
+                            <img src="assets/img/cart-empty.png" alt="">
+                        </div>
+                        <p style="text-align: center;">Your cart is empty! <br>Add items to get started</p>
+                    </div>
                 </div>
             </div>
-            <!-- End Side Menu -->
+            <!-- End Cart Menu -->
 
         </nav>
         <!-- End Navigation -->
@@ -180,7 +173,7 @@
                                         <div class="content">
                                             <h3 data-animation="animated slideInDown">Welcome to Eat.ng</h3>
                                             <h1 data-animation="animated slideInLeft">Savor Authentic Nigerian Flavors!</h1>
-                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#">Order Online</a>
+                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="menu.html">Order Online</a>
                                         </div>
                                     </div>
                                 </div>
@@ -198,7 +191,7 @@
                                         <div class="content">
                                             <h3 data-animation="animated slideInDown">Explore Dishes</h3>
                                             <h1 data-animation="animated slideInLeft">Delve into Culinary Excellence</h1>
-                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#">Explore Menu</a>
+                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="menu.html">Explore Menu</a>
                                         </div>
                                     </div>
                                 </div>
@@ -207,7 +200,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/hero-3.avif);"></div>
+                    <div class="slider-thumb bg-cover" style="background-image: url(assets/img/hero-3.jpg);"></div>
                     <div class="box-table shadow dark">
                         <div class="box-cell">
                             <div class="container">
@@ -216,7 +209,7 @@
                                         <div class="content">
                                             <h3 data-animation="animated slideInDown">Book Now</h3>
                                             <h1 data-animation="animated slideInLeft">Elevate Your Dining Experience</h1>
-                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="#">Reserve A Table</a>
+                                            <a data-animation="animated slideInUp" class="btn btn-light border btn-md" href="reservation.html">Reserve A Table</a>
                                         </div>
                                     </div>
                                 </div>
@@ -575,7 +568,7 @@
                                         <div class="thumb">
                                             <a href="#">
                                                 <img src="assets/img/2.jpg" alt="Thumb">
-                                                <h5>₦</h5>
+                                                <h5>₦150</h5>
                                             </a>
                                         </div>
                                         <div class="info">
@@ -887,7 +880,7 @@
                         <div class="single-item flex">
                             <div class="thumb">
                                 <a href="#">
-                                    <img src="assets/img/home-blog-1-1.jpg" alt="Thumb">
+                                    <img src="assets/img/home-blog-2.jpg" alt="Thumb">
                                 </a>
                             </div>
                             <div class="info">
