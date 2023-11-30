@@ -90,10 +90,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   margin: 0;
 }
-.about-items .col-md-7 .about-location-h2{
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 550;
-}
+
 h1,h2,h3,h4 {
   margin-bottom: 15px;
 }
@@ -1826,6 +1823,10 @@ body,
   line-height: 1.4;
   margin-bottom: 25px;
 }
+/* .about-area .about-items .info .about-location-h2{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 550;
+} */
 
 .about-area .info > ul li {
   float: left;
