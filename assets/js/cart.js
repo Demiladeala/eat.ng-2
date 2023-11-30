@@ -24,6 +24,7 @@ if (getQuoteButton) {
     });
 }
 //GET LANDING PAGE MENU PRODUCTS
+
 let listProductHTML = document.querySelector('.menu-flex');
 let listCartHTML = document.querySelector(".cart-items-container");
 let iconCartSpan = document.querySelector(".cart-icon span")
@@ -39,11 +40,11 @@ const addDataToHTML = () => {
             newProduct.dataset.id = product.id;
             newProduct.classList.add("item-single");
             newProduct.classList.add("pf-item");
-            if (product.category && Array.isArray(product.category)) {
-                product.category.forEach(category => {
-                    newProduct.classList.add(category.toLowerCase());
-                });
-            }
+                if (product.category && Array.isArray(product.category)) {
+                    product.category.forEach(category => {
+                        newProduct.classList.add(category.toLowerCase());
+                    });
+                }
             newProduct.innerHTML = `
             <div class="item">
                 <div class="thumb">
