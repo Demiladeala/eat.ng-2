@@ -78,7 +78,9 @@
                 <div class="attr-nav">
                     <ul>
                         <li class="search"><a href="#"><i class="bi bi-search"></i></a></li>
-                        <li class="side-cart"><a href="#"><i class="bi bi-bag"></i></a></li>
+                        <li class="side-cart"><a href="#"><i class="bi bi-bag"></i>
+                            <div class="cart-icon"><span>0</span></div>
+                        </a></li>
                         <li class="quote-btn"><a href="reservation.html">Book a table</a></li>
                     </ul>
                 </div>        
@@ -137,17 +139,13 @@
                             <h4 class="title">Cart</h4>
                         </div>
                         <div onclick="closeCustomOffcanvas()">
-                            <a href="#" class="close-cart"><i class="fa fa-times" style="color: #f44336;"></i></a>
+                            <a href="#" class="close-cart"><i class="bi bi-x"></i></a>
                         </div>
                     </div>
-                    <div class="widget">
-                        <!-- Offcanvas content goes here -->
-                        <div style="display: flex; justify-content:center; align-items:center">
-                            <img src="assets/img/cart-empty.png" alt="">
-                        </div>
-                        <p style="text-align: center;">Your cart is empty! <br>Add items to get started</p>
+                    <div class="cart-items-container">
+                        
                     </div>
-                </div>
+                </div>   
             </div>
             <!-- End Cart Menu -->
 
@@ -644,6 +642,7 @@
     <script src="assets/js/YTPlayer.min.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
 
 </body>
 </html>
