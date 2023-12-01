@@ -76,11 +76,6 @@ const addCartToHTML = () => {
                     </div>
                 </div>
             </div>
-
-            <div class="items-button-container">
-                <button>Proceed to Checkout</button>
-                <button class="cancel-button" onclick="clearOrders()">Clear Orders</button>
-            </div>
             `
             listCartHTML.appendChild(newCart);
         })
@@ -94,6 +89,16 @@ const addCartToHTML = () => {
             </div>
         `;
         listCartHTML.appendChild(totalContainer);
+
+        let buttonContainer = document.createElement('div');
+        buttonContainer.classList.add('button-container');
+        buttonContainer.innerHTML = `
+        <div class="items-button-container">
+            <button>Proceed to Checkout</button>
+            <button class="cancel-button" onclick="clearOrders()">Clear Orders</button>
+        </div>
+        `;
+        listCartHTML.appendChild(buttonContainer);
     }
     if(carts.length <= 0){
         let newCart = document.createElement('div');

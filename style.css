@@ -4974,11 +4974,11 @@ footer.shadow .footer-bottom {
   font-size:1.3rem;
 }
 .items-button-container{
-  position:absolute;
   width:100%;
   left:0;
-  bottom:6rem;
+  bottom:0;
   padding:0 0.4rem;
+  margin:1rem 0;
   display:grid;
   gap:1rem;
   grid-template-columns: repeat(2, 1fr);
@@ -5006,4 +5006,35 @@ footer.shadow .footer-bottom {
   padding:0;
   margin:0;
 }
-
+.button-container{
+  margin-bottom:1rem;
+}
+/* MENU CATEGORY */
+.category-menu{
+  padding: 0;
+  margin-bottom: 20px;
+  display: inline-block;
+  text-align: center;
+}
+.category-menu button{
+  border:none;
+  padding: 8px 25px;
+  border: 1px solid #e7e7e7;
+  margin: 5px;
+  background: #ffffff;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.category-menu .active-btn{
+  color: #e7272d;
+  position:relative;
+  z-index:1;
+}
+.meal-category {
+  display: none;
+}
+.meal-category.active {
+  display: block;
+}

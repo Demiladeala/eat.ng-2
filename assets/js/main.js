@@ -374,3 +374,27 @@ if (getQuoteButton) {
         }
     });
 }
+//FOOD MENU CATEGORIES
+document.getElementById('all').classList.add('active-btn');
+
+    function toggleCategory(category) {
+        // Remove 'active-btn' class from all buttons
+        var buttons = document.querySelectorAll('.category-menu button');
+        buttons.forEach(function (button) {
+            button.classList.remove('active-btn');
+        });
+
+        // Add 'active-btn' class to the clicked button
+        var activeButton = document.getElementById(category);
+        activeButton.classList.add('active-btn');
+
+        // Hide all meal categories
+        var mealCategories = document.querySelectorAll('.meal-category');
+        mealCategories.forEach(function (category) {
+            category.classList.remove('active');
+        });
+
+        // Show the selected meal category
+        var selectedCategory = document.getElementById(category + '-meals');
+        selectedCategory.classList.add('active');
+    }
