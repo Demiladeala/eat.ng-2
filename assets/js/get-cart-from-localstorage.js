@@ -7,50 +7,6 @@ let cartIcon = document.querySelector(".cart-icon");
 let listProducts = [];
 let carts = [];
 
-const addDataToHTML = () => {
-    listProductHTML.innerHTML = "";
-    listProductHTML.classList.add("col-2")
-    if(listProducts.length > 0){
-        listProducts.forEach(product => {
-            let newProduct = document.createElement("div");
-            newProduct.dataset.id = product.id;
-            newProduct.classList.add("item-single");
-            newProduct.classList.add("pf-item");
-                if (product.category && Array.isArray(product.category)) {
-                    product.category.forEach(category => {
-                        newProduct.classList.add(category.toLowerCase());
-                    });
-                }
-            newProduct.innerHTML = `
-            <div class="item">
-                <div class="thumb">
-                    <img src=${product.image} alt="Thumb">
-                    <h5>₦${product.price}</h5>
-                </div>
-                <div class="info">
-                    <h4>${product.name}</h4>
-                    <p>
-                        ${product.description}
-                    </p>
-                    <span class="Add-To-Cart">Add to Cart</span>
-                </div>
-            </div>
-            `
-            listProductHTML.appendChild(newProduct);
-        })
-    }
-}
-
-listProductHTML.addEventListener('click', (event) => {
-    let positionClick = event.target;
-    if(positionClick.classList.contains('Add-To-Cart')){
-        let product_id = positionClick.closest('.item-single').dataset.id;
-        addToCart(product_id);
-        getCartFromLocalStorage();
-    }else{
-
-    }
-})
 
 const addToCart = (product_id) => {
     let positionThisProductInCart = carts.findIndex((value) => value.product_id == product_id);
@@ -88,9 +44,11 @@ const addCartToMemory = () => {
 
 const addCartToHTML = () => {
     listCartHTML.innerHTML = "";
+    let totalQuantity = 0;
     let totalPrice = 0;
     if(carts.length > 0){
         carts.forEach(cart => {
+            totalQuantity = totalQuantity + cart.quantity;
             let newCart = document.createElement('div');
             newCart.classList.add('ct-items');
             newCart.dataset.id = cart.product_id;
@@ -213,6 +171,7 @@ const clearOrders = () => {
 }
 
 const getCartFromLocalStorage = () => {
+    // listCartHTML.innerHTML = "";
     let totalItemQuantity = 0;
     // get from local storage 
     const cartJSON = localStorage.getItem('cart');
@@ -220,8 +179,9 @@ const getCartFromLocalStorage = () => {
         const cart = JSON.parse(cartJSON);
         console.log(cart);
         const totalQuantity = cart.reduce((sum, cart) => sum + cart.quantity, 0);
-        iconCartSpan.innerHTML = totalQuantity;
         updateCartIconVisibility(totalQuantity);
+        console.log(totalQuantity);
+        iconCartSpan.innerText = totalQuantity;
         if(cart.length > 0) {
             totalItemQuantity = totalItemQuantity + cart.quantity;
         }
@@ -241,7 +201,6 @@ const initApp = () => {
     .then(response => response.json())
     .then(data => {
         listProducts = data;
-        addDataToHTML();
 
         if(localStorage.getItem('cart')){
             carts = JSON.parse(localStorage.getItem('cart'));

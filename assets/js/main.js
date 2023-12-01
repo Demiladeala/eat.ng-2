@@ -349,3 +349,28 @@
 
     }); // end document ready function
 })(jQuery); // End jQuery
+// JavaScript to toggle the cart
+$(document).ready(function () {
+    $('.side-cart').on('click', function () {
+        $('#customOffcanvas, .overlay').toggleClass('show');
+    });
+});
+
+// JavaScript to close the cart
+function closeCustomOffcanvas() {
+    $('#customOffcanvas, .overlay').removeClass('show');
+}
+// When the window y scroll > 32, add a class to the <a> tag in <li> with class "quote-button"
+var getQuoteButton = document.querySelector('.quote-btn a');
+
+if (getQuoteButton) {
+    window.addEventListener("scroll", function () {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+        
+        if (scrollTop > 32) {
+            getQuoteButton.id = "home-quote-btn-color";
+        } else {
+            getQuoteButton.removeAttribute("id");
+        }
+    });
+}
