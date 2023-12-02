@@ -1,0 +1,170 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration: none;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.signup-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.image-container{
+    position: relative;
+    flex-basis: 55%;
+    width: 100%;
+    height: 100%;
+    background: url(../img/login.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+}
+.signup-details-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-basis: 45%;
+    background: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    position: absolute;
+    top: 1rem; 
+}
+.logo img{
+    width: 8rem;
+}
+
+.details-container{
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+}
+.details-container h2{
+    width: 100%;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+}
+.details-container p{
+    color: #666666;
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+.icon-container{
+    width: 100%;
+    display: flex;
+    gap: .6rem;
+    align-items: center;
+    justify-content: start;
+    margin-top: 1.8rem;
+}
+.icon-container .auth-icon{
+    width: 1rem;
+    padding: 0.9rem 1.7rem;
+    border: solid 1px #dfdfdf;
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icon-container .auth-icon:hover{
+    background: #f9f9f9;
+}
+.name-address-container{
+    width: 100%;
+    margin-top: 1.3rem;
+}
+.name-address-container h3 , .email-address-container h3{
+    font-size: 0.9rem;
+    color: #222;
+}
+.name-address-container input, .email-address-container input{
+    outline: none;
+    width: 100%;
+    border: solid 1px #ccc;
+    padding: 0.6rem 0.3rem;
+    border-radius: 6px;
+    margin-top: 0.7rem;
+}
+.email-address-container{
+    width: 100%;
+    margin-top: 1rem;
+}
+.button-container{
+    width: 100%;
+    margin-top: 1.5rem;
+}
+.button-container button {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #e7272d;
+    color: #fff;
+    padding: 0.7rem 0;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.button-container button:hover{
+    opacity: 95%;
+}
+.button-container h4{
+    font-size: 1rem;
+    font-weight: normal;
+}
+.link-container{
+    width: 100%;
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: end;
+}
+.links{
+    display: flex;
+    gap: 4px;
+}
+.links h3, .links a{
+    color: #222;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+.links a{
+    color: #e7272d;
+}
+
+
+
+/* RESPONSIVENESS */
+@media only screen and (max-width: 768px) {
+    .image-container{
+        display: none;
+    }
+    .signup-details-container{
+       flex-basis: 100%;
+    }
+    .details-container{
+        width: 90%;
+        height: 80%;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        border-radius: 1rem;
+    }
+}

@@ -136,7 +136,7 @@ const addCartToHTML = () => {
         buttonContainer.classList.add('button-container');
         buttonContainer.innerHTML = `
         <div class="items-button-container">
-            <button>Proceed to Checkout</button>
+            <button><a href="checkout.html">Proceed to Checkout</a></button>
             <button class="cancel-button" onclick="clearOrders()">Clear Orders</button>
         </div>
         `;

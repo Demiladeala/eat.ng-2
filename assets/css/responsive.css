@@ -971,3 +971,24 @@
     display: inline-block;
   }
 }
+
+@media only screen and (max-width: 1110px) {
+  .checkout-container {
+    grid-template-columns: 100%;
+    padding: 0px;
+  }
+  .checkout-container .cart-items{
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .quantity-price-container{
+    width: 100%;
+    flex-direction:row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cart-total-container{
+    height: auto;
+  }
+}
