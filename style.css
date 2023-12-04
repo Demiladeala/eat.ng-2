@@ -5153,3 +5153,6 @@ footer.shadow .footer-bottom {
 .checkout-payment-button button:hover{
   opacity: 95%
 }
+.book-table{
+  border-radius:6px;
+}

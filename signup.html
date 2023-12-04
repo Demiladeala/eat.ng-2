@@ -1,29 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Eat.ng">
+
+    <!-- ========== Page Title ========== -->
     <title>Eat.ng - SignUp</title>
 
-    <!-- Links -->
-    <link rel="stylesheet" href="assets/css/signup.css">
+    <!-- ========== Favicon Icon ========== -->
+    <!-- <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon"> -->
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/flaticon-set.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/bootsnav.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/foodCategory.css">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/login.css">
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5/html5shiv.min.js"></script>
+      <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+
 </head>
 <body>
-    <div class="signup-container">
-        <div class="image-container">
+    <header id="home">
 
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default fixed-border navbar-fixed white bootsnav">
+            
+            <!-- Start Top Search -->
+            <!-- <div class="container">
+                <div class="row">
+                    <div class="top-search">
+                        <div class="input-group">
+                            <form action="#">
+                                <input type="text" name="text" class="form-control" placeholder="Search">
+                                <button type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>  
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- End Top Search -->
+            
+            <div class="container">
+
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <!-- <li class="search"><a href="#"><i class="bi bi-search"></i></a></li> -->
+                        <li class="side-cart"><a href="#"><i class="bi bi-bag"></i>
+                            <div class="cart-icon"><span>3</span></div>
+                        </a></li>
+                        <li style class="quote-btn book-table"><a href="reservation.html">Book a table</a></li>
+                    </ul>
+                </div>        
+                <!-- End Atribute Navigation -->
+                
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo-light.png" id="filter" class="logo logo-display" alt="Logo">
+                        <img src="assets/img/logo.png" class="logo logo-scrolled" alt="Logo">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                            <!-- <ul class="dropdown-menu">
+                                <li><a href="about.html" >About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="404.html">Error Page</a></li>
+                            </ul> -->
+                        </li>
+                        <li>
+                            <a href="menu.html">Menu</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">contact</a>
+                        </li>
+
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+
+            
+            <!-- Start Cart Menu -->
+            <div class="overlay">
+                <div class="custom-offcanvas" id="customOffcanvas">
+                    <div class="cart-item-container align-items-center" style="align-items: center;">
+                        <div>
+                            <h4 class="title">Cart</h4>
+                        </div>
+                        <div onclick="closeCustomOffcanvas()">
+                            <a href="#" class="close-cart"><i class="bi bi-x"></i></a>
+                        </div>
+                    </div>
+                    <div class="cart-items-container">
+
+                        <div class="cart-items">
+                            <div class="item-Image-desc-price-container">
+                                <img src="assets/img/4.jpg">
+                                <div class="item-desc-price-container">
+                                    <p>Pounded Yam</p>
+                                    <h4>₦500</h4>
+                                </div>
+                            </div>
+                            <div class="item-add-itemPrice-reduce-remove-container">
+                                <div class="item-add-itemPrice-reduce-container">
+                                    <i style="cursor: pointer;" class="bi bi-dash-lg minus"></i>
+                                    <h4>1</h4>
+                                    <i style="cursor: pointer;" class="bi bi-plus-lg plus"></i>
+                                </div> 
+                                <div class="item-remove-container">
+                                    <i style="cursor: pointer; color:#ef4444;" class="bi bi-trash trash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-items">
+                            <div class="item-Image-desc-price-container">
+                                <img src="assets/img/5.jpg">
+                                <div class="item-desc-price-container">
+                                    <p>Burger</p>
+                                    <h4>₦1500</h4>
+                                </div>
+                            </div>
+                            <div class="item-add-itemPrice-reduce-remove-container">
+                                <div class="item-add-itemPrice-reduce-container">
+                                    <i style="cursor: pointer;" class="bi bi-dash-lg minus"></i>
+                                    <h4>1</h4>
+                                    <i style="cursor: pointer;" class="bi bi-plus-lg plus"></i>
+                                </div> 
+                                <div class="item-remove-container">
+                                    <i style="cursor: pointer; color:#ef4444;" class="bi bi-trash trash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-items">
+                            <div class="item-Image-desc-price-container">
+                                <img src="assets/img/1.jpg">
+                                <div class="item-desc-price-container">
+                                    <p>Spaghetti</p>
+                                    <h4>₦2500</h4>
+                                </div>
+                            </div>
+                            <div class="item-add-itemPrice-reduce-remove-container">
+                                <div class="item-add-itemPrice-reduce-container">
+                                    <i style="cursor: pointer;" class="bi bi-dash-lg minus"></i>
+                                    <h4>1</h4>
+                                    <i style="cursor: pointer;" class="bi bi-plus-lg plus"></i>
+                                </div> 
+                                <div class="item-remove-container">
+                                    <i style="cursor: pointer; color:#ef4444;" class="bi bi-trash trash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="total-container">
+                            <div class="total-price">
+                            <p>Total</p>
+                            <h4>₦2000</h4>
+                        </div>
+
+                        <div class="items-button-container">
+                            <button><a href="checkout.html">Proceed to Checkout</a></button>
+                            <button class="cancel-button" onclick="clearOrders()">Clear Orders</button>
+                        </div>
+                    </div>
+
+                    
+                </div>   
+            </div>
+            <!-- End Cart Menu -->
+
+        </nav>
+        <!-- End Navigation -->
+
+    </header>
+    <!-- End Header -->
+
+
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area shadow text-center dark bg-fixed text-light" style="background-image: url(assets/img/banner-signup.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>SIGN UP</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <!-- <li><a href="#">Pages</a></li> -->
+                        <li class="active">Sign Up</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+    <div class="signup-container">
 
         <div class="signup-details-container">
 
-            <div class="logo">
-                <img  src="assets/img/logo.png" alt="">
-            </div>
-
             <div class="details-container">
+
+                <div class="logo">
+                    <img  src="assets/img/logo.png" alt="">
+                </div>
+
                 <h2>Sign Up</h2>
                 <p>to continue to Eat.ng</p>
     
@@ -33,6 +258,9 @@
                     </div>
                     <div class="auth-icon">
                         <img src="assets/img/gmail.png" alt="">
+                    </div>
+                    <div class="auth-icon">
+                        <img src="assets/img/apple.png" alt="">
                     </div>
                 </div>
 
@@ -53,13 +281,112 @@
     
                 <div class="link-container">
                     <div class="links">
-                        <h3>Already have an account ?</h3>
-                        <h3><a href="login.html">Sign In</a></h3>
+                        <h3>Have an account already?</h3>
+                        <h3><a href="signup.html">Sign In</a></h3>
                     </div>
                 </div>
             </div>
             
         </div>
+
+        <div class="image-container">
+
+        </div>
     </div>
+
+
+
+
+    <!-- Start Footer 
+    ============================================= -->
+    <footer class="bg-fixed pattern shadow dark-hard" style="background-image: url(assets/img/home-footer.jpg);">
+        <div class="container">
+            <div class="row">
+
+                <div class="f-items title-effect text-light default-padding">
+                    <div class="col-md-6 col-md-offset-3 item-center text-center">
+                        <a href="#"><img src="assets/img/logo-light.png" alt="Logo"></a>
+                        <p>
+                            30, Lome Crescent, Wuse zone 7, Abuja.
+                        </p>
+                        <ul>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:08012345678">08012345678</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope-open"></i>
+                                <a href="mailto:Eat-ng.com">Eat.ng@gmail.com</a>
+                            </li>
+                        </ul>
+                        <div class="social">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Footer Bottom -->
+        <div class="footer-bottom text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; Copyright 2023. All Rights Reserved by <a href="#">Eat.ng</a></p>
+                    </div>
+                    <div class="col-md-6 text-right link">
+                        <ul>
+                            <li>
+                                <a href="#">Terms of user</a>
+                            </li>
+                            <li>
+                                <a href="#">License</a>
+                            </li>
+                            <li>
+                                <a href="#">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer Bottom -->
+    </footer>
+    <!-- End Footer -->
+
+        <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/equal-height.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/modernizr.custom.13711.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/YTPlayer.min.js"></script>
+    <script src="assets/js/bootsnav.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
 </body>
 </html>

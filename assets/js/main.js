@@ -374,27 +374,96 @@ if (getQuoteButton) {
         }
     });
 }
-//FOOD MENU CATEGORIES
-document.getElementById('all').classList.add('active-btn');
+//FOOD CATEGORIES
+$(document).ready(function () {
+    // Scroll to the left
+    $(".left").on("click", function () {
+        $(".category-container").animate({ scrollLeft: "-=300px" }, "slow");
+    });
 
-    function toggleCategory(category) {
-        // Remove 'active-btn' class from all buttons
-        var buttons = document.querySelectorAll('.category-menu button');
-        buttons.forEach(function (button) {
-            button.classList.remove('active-btn');
-        });
+    // Scroll to the right
+    $(".right").on("click", function () {
+        $(".category-container").animate({ scrollLeft: "+=300px" }, "slow");
+    });
+});
 
-        // Add 'active-btn' class to the clicked button
-        var activeButton = document.getElementById(category);
-        activeButton.classList.add('active-btn');
+$(document).ready(function () {
+    // Scroll to the left
+    $(".left").on("click", function () {
+        $(".menu-category-container").animate({ scrollLeft: "-=380px" }, "slow");
+    });
 
-        // Hide all meal categories
-        var mealCategories = document.querySelectorAll('.meal-category');
-        mealCategories.forEach(function (category) {
-            category.classList.remove('active');
-        });
+    // Scroll to the right
+    $(".right").on("click", function () {
+        $(".menu-category-container").animate({ scrollLeft: "+=380px" }, "slow");
+    });
+});
 
-        // Show the selected meal category
-        var selectedCategory = document.getElementById(category + '-meals');
-        selectedCategory.classList.add('active');
+$(document).ready(function () {
+    var scrollInterval;
+
+    // Function to start automatic sliding
+    function startAutoSlide() {
+        scrollInterval = setInterval(function () {
+            var container = $(".category-container");
+            var cardWidth = $(".card").outerWidth(true);
+
+            container.animate({ scrollLeft: "+=" + cardWidth + "px" }, "slow", function () {
+                // Check if we've reached the end
+                if (container.scrollLeft() + container.width() >= container[0].scrollWidth) {
+                    // If at the end, reset to the beginning
+                    container.scrollLeft(0);
+                }
+            });
+        }, 3000); // Adjust the interval as needed (3000 milliseconds = 3 seconds)
     }
+
+    // Function to stop automatic sliding
+    function stopAutoSlide() {
+        clearInterval(scrollInterval);
+    }
+
+    // Scroll to the left
+    $(".left").on("click", function () {
+        $(".category-container").stop().animate({ scrollLeft: "-=300px" }, "slow", function () {
+            // Check if we've reached the beginning
+            if ($(this).scrollLeft() === 0) {
+                // If at the beginning, scroll to the end for a smooth loop
+                $(this).scrollLeft($(this)[0].scrollWidth);
+            }
+        });
+        stopAutoSlide();
+    });
+
+    // Scroll to the right
+    $(".right").on("click", function () {
+        $(".category-container").stop().animate({ scrollLeft: "+=300px" }, "slow", function () {
+            // Check if we've reached the end
+            if ($(this).scrollLeft() + $(this).width() >= $(this)[0].scrollWidth) {
+                // If at the end, reset to the beginning
+                $(this).scrollLeft(0);
+            }
+        });
+        stopAutoSlide();
+    });
+
+    // Start automatic sliding on page load
+    startAutoSlide();
+
+    // Pause automatic sliding when hovering over the category container
+    $(".category-container").hover(
+        function () {
+            stopAutoSlide();
+        },
+        function () {
+            startAutoSlide();
+        }
+    );
+});
+
+//ACTUAL MENU
+$(document).ready(function () {
+    $('#categories .toggle-arrow').click(function () {
+        $('#categories').toggleClass('active');
+    });
+});

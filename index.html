@@ -25,6 +25,7 @@
     <link href="assets/css/animate.css" rel="stylesheet" />
     <link href="assets/css/bootsnav.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/foodCategory.css">
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <!-- ========== End Stylesheet ========== -->
 
@@ -57,7 +58,7 @@
         <nav class="navbar navbar-default fixed-border navbar-fixed white bootsnav">
             
             <!-- Start Top Search -->
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row">
                     <div class="top-search">
                         <div class="input-group">
@@ -70,7 +71,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Top Search -->
             
             <div class="container">
@@ -78,11 +79,11 @@
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
-                        <li class="search"><a href="#"><i class="bi bi-search"></i></a></li>
+                        <!-- <li class="search"><a href="#"><i class="bi bi-search"></i></a></li> -->
                         <li class="side-cart"><a href="#"><i class="bi bi-bag"></i>
-                            <div class="cart-icon"><span>0</span></div>
+                            <div class="cart-icon"><span>3</span></div>
                         </a></li>
-                        <li class="quote-btn"><a href="reservation.html">Book a table</a></li>
+                        <li style class="quote-btn book-table"><a href="reservation.html">Book a table</a></li>
                     </ul>
                 </div>        
                 <!-- End Atribute Navigation -->
@@ -143,8 +144,80 @@
                         </div>
                     </div>
                     <div class="cart-items-container">
-                        
+
+                        <div class="cart-items">
+                            <div class="item-Image-desc-price-container">
+                                <img src="assets/img/4.jpg">
+                                <div class="item-desc-price-container">
+                                    <p>Pounded Yam</p>
+                                    <h4>₦500</h4>
+                                </div>
+                            </div>
+                            <div class="item-add-itemPrice-reduce-remove-container">
+                                <div class="item-add-itemPrice-reduce-container">
+                                    <i style="cursor: pointer;" class="bi bi-dash-lg minus"></i>
+                                    <h4>1</h4>
+                                    <i style="cursor: pointer;" class="bi bi-plus-lg plus"></i>
+                                </div> 
+                                <div class="item-remove-container">
+                                    <i style="cursor: pointer; color:#ef4444;" class="bi bi-trash trash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-items">
+                            <div class="item-Image-desc-price-container">
+                                <img src="assets/img/5.jpg">
+                                <div class="item-desc-price-container">
+                                    <p>Burger</p>
+                                    <h4>₦1500</h4>
+                                </div>
+                            </div>
+                            <div class="item-add-itemPrice-reduce-remove-container">
+                                <div class="item-add-itemPrice-reduce-container">
+                                    <i style="cursor: pointer;" class="bi bi-dash-lg minus"></i>
+                                    <h4>1</h4>
+                                    <i style="cursor: pointer;" class="bi bi-plus-lg plus"></i>
+                                </div> 
+                                <div class="item-remove-container">
+                                    <i style="cursor: pointer; color:#ef4444;" class="bi bi-trash trash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-items">
+                            <div class="item-Image-desc-price-container">
+                                <img src="assets/img/1.jpg">
+                                <div class="item-desc-price-container">
+                                    <p>Spaghetti</p>
+                                    <h4>₦2500</h4>
+                                </div>
+                            </div>
+                            <div class="item-add-itemPrice-reduce-remove-container">
+                                <div class="item-add-itemPrice-reduce-container">
+                                    <i style="cursor: pointer;" class="bi bi-dash-lg minus"></i>
+                                    <h4>1</h4>
+                                    <i style="cursor: pointer;" class="bi bi-plus-lg plus"></i>
+                                </div> 
+                                <div class="item-remove-container">
+                                    <i style="cursor: pointer; color:#ef4444;" class="bi bi-trash trash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="total-container">
+                            <div class="total-price">
+                            <p>Total</p>
+                            <h4>₦2000</h4>
+                        </div>
+
+                        <div class="items-button-container">
+                            <button><a href="checkout.html">Proceed to Checkout</a></button>
+                            <button class="cancel-button" onclick="clearOrders()">Clear Orders</button>
+                        </div>
                     </div>
+
+                    
                 </div>   
             </div>
             <!-- End Cart Menu -->
@@ -230,9 +303,9 @@
             </a>
         </div>
         <!-- Shape -->
-        <div class="wavesshape">
+        <!-- <div class="wavesshape">
             <img src="assets/img/shape.png" alt="Shape">
-        </div>
+        </div> -->
         <!-- Shape -->
     </div>
     <!-- End Banner -->
@@ -248,70 +321,63 @@
 
     <!-- Start About 
     ============================================= -->
-    <div class="about-area half-bg default-padding">
+    <div class="about-area default-padding">
         <div class="container">
             <div class="row">
                 <div class="about-items">
-                    <div class="col-md-7 info">
-                        <!-- <h3>Our Story</h3> -->
-                        <h2 class="about-location-h2">Dedicated to Excellence Since 2013</h2>
-                        <p>
-                            Born out of a passion for sharing the cultural tapestry of Nigeria, Eat.ng was founded with a commitment to delivering a dining experience that transcends the ordinary.
-                        </p>
-                        <p>
-                            Our menu, curated with care and respect for tradition, showcases a medley of savory spices, locally sourced ingredients, and time-honored recipes passed down through generations.
-                        </p>
-                        <ul>
-                            <li>
-                                <a href="tel:0801234567" >
-                                <div class="icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="info">
-                                    
-                                    <h4>Phone</h4>
-                                    <span style="color: #666666;">08012345678</span>
-                                    <div class="line"></div>
-                                </div>
-                            </a>
-                            </li>
-                            <li>
-                                <a href="mailto:Eat.ng@-gmail.com" >
-                                <div class="icon">
-                                    <i class="fas fa-envelope-open"></i>
-                                </div>
-                                <div class="info">
-                                    
-                                    <h4>Email</h4>
-                                    <span style="color: #666666;">Eat.ng@gmail.com</span>
-                                    <div class="line"></div>
-                                </div>
-                            </a>
-                            </li>
-                        </ul>
+                    <div class="col-md-6 thumb">
+                        <img src="assets/img/about.jpg" alt="Thumb">
+                        <!-- <a href="https://www.youtube.com/watch?v=owhuBrGIOsE" class="popup-youtube light video-play-button item-center">
+                            <i class="fa fa-play"></i>
+                        </a> -->
                     </div>
-                    <div class="col-md-4 col-md-offset-1 text-light opening-hours">
-                        <div class="item">
-                            <h2>Opening Hours</h2>
+                    <div class="col-md-6 info">
+                        <!-- <h3>About Eat.ng</h3> -->
+                        <h2>Dine in Style</h2>
+                        <p>
+                            We serve a variety of African and continental dishes prepared by the finest chefs. All foods are freshly made with natural spices to give you the best. You can also order from our wide collection of cocktails, wines, and champagne. We are all about fun and relaxation.
+                        </p>
+                        <p>
+                            Our mission is to leave each guest feeling extremely satisfied and convinced that we are the best option for their regular, authentic nightlife experience. We do this by providing the best guest service experience with a sense of warmth, friendliness, and individual pride.
+                        </p>
+                        <div class="address">
                             <ul>
-                                <li> 
-                                    <span> MON - TUE :  </span>
-                                    <div class="pull-right"> 6.00 am - 12.00 pm </div>
+                                <li>
+                                    <span>Address</span>
+                                    <p>
+                                        30, Lome Crescent, Wuse zone 7, Abuja.
+                                    </p>
                                 </li>
-                                <li> 
-                                    <span> WED - THUR :  </span>
-                                    <div class="pull-right"> 8.30 am - 11.00 pm </div>
+                                <li>
+                                    <span>Phone</span>
+                                    <p>
+                                        <a style="color: #666666;" href="tel:08012345678">08012345678</a>
+                                        <div class="line"></div>
+                                    </p>
                                 </li>
-                                <li> 
-                                    <span> FRI - SAT :  </span>
-                                    <div class="pull-right"> 9.00 am - 10.30 pm </div>
-                                </li>
-                                <li> 
-                                    <span> SUNDAY :  </span>
-                                    <div class="pull-right"> CLOSED </div>
-                                </li>
-                                <li style="text-transform: capitalize;">30, Lome Crescent, Wuse zone 7, Abuja.</li>
                             </ul>
+                            <div class="location">
+                                <h2>Opening Hours</h2>
+                                <ul>
+                                    <div class="li"> 
+                                        <span> MON - TUE :  </span>
+                                        <div class="pull-right"> 6.00 am - 12.00 pm </div>
+                                    </div>
+                                    <div class="li"> 
+                                        <span> WED - THUR :  </span>
+                                        <div class="pull-right"> 8.30 am - 11.00 pm </div>
+                                    </div>
+                                    <div class="li"> 
+                                        <span> FRI - SAT :  </span>
+                                        <div class="pull-right"> 9.00 am - 10.30 pm </div>
+                                    </div>
+                                    <div class="li"> 
+                                        <span> SUNDAY :  </span>
+                                        <div class="pull-right"> CLOSED </div>
+                                    </div>      
+                            </div>
+                            <div style="text-transform: capitalize; float:left; font-weight:600; color:#222">30, Lome Crescent, Wuse zone 7, Abuja.</div>
+                        </ul>
                         </div>
                     </div>
                 </div>
@@ -329,106 +395,87 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="site-heading text-center">
-                        <h3>Discover</h3>
-                        <h2>Featured Dishes</h2>
+                        <!-- <h3>Discover</h3> -->
+                        <h2>Categories</h2>
                         <p>
-                            Discover Our Menu's Finest: Taste Excellence Today.
+                            Satisfy Your Cravings, Explore Our Categories.
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="menu-lists food-menu-carousel owl-carousel owl-theme text-center">
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="assets/img/menu-3.jpg" alt="Thumb">
-                                </a>
-                                <div class="price">
-                                    <h5>₦1500</h5>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <h4><a href="#">Jollof Rice</a></h4>
-                                <span>Jollof Rice / Plantain / Beef</span>
-                                <p>
-                                    Jollof Rice and Chicken
-                                </p>
-                                <div class="button">
-                                    <a class="side-cart" href="#">Add To Cart</a>
-                                </div>
-                            </div>
+            <div class="category-holder">
+                <div class="arrow-container left">
+                    <i class="fa fa-angle-left"></i>
+                </div>
+
+                <div class="arrow-container right">
+                    <i class="fa fa-angle-right"></i>
+                </div>
+
+                <div  class="category-container">
+
+
+                    <div class="card"><a href="menu.html">
+                        <div>
+                            <img src="assets/img/menu-1.jpg" alt="">
                         </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="assets/img/menu-4.jpg" alt="Thumb">
-                                </a>
-                                <div class="price">
-                                    <h5>₦600</h5>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <h4><a href="#">Amala</a></h4>
-                                <span>Beef / Amala / Efo</span>
-                                <p>
-                                    Enjoy Amala, Goat meat with thick efo riro
-                                </p>
-                                <div class="button">
-                                    <a class="side-cart" href="#">Add To Cart</a>
-                                </div>
-                            </div>
+                        <div class="category-link">
+                            Breakfast
+                            <div class="line"></div>
                         </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="assets/img/menu-5.jpg" alt="Thumb">
-                                </a>
-                                <div class="price">
-                                    <h5>₦1000</h5>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <h4><a href="#">Rice & Beans</a></h4>
-                                <span>Rice / Beans / Salt</span>
-                                <p>
-                                    Rice, beans, plantain and beef
-                                </p>
-                                <div class="button">
-                                    <a class="side-cart" href="#">Add To Cart</a>
-                                </div>
-                            </div>
+                    </div></a>
+
+                    <div class="card"><a href="menu.html">
+                        <div>
+                            <img src="assets/img/menu-6.jpg" alt="">
                         </div>
-                        <!-- End Single Item -->
-                        <!-- Single Item -->
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="#">
-                                    <img src="assets/img/menu-6.jpg" alt="Thumb">
-                                </a>
-                                <div class="price">
-                                    <h5>₦600</h5>
-                                </div>
-                            </div>
-                            <div class="info">
-                                <h4><a href="#">Pounded Yam</a></h4>
-                                <span>Pounded Yam / Efo /Chicken</span>
-                                <p>
-                                    Pounded Yam with Vegetable Soup
-                                </p>
-                                <div class="button">
-                                    <a class="side-cart" href="#">Add To Cart</a>
-                                </div>
-                            </div>
+                        <div class="category-link">
+                            Swallow
+                            <div class="line"></div>
                         </div>
-                        <!-- End Single Item -->
-                    </div>
+                    </div></a>
+
+                    <div class="card"><a href="menu.html">
+                        <div>
+                            <img src="assets/img/menu-9.jpg" alt="">
+                        </div>
+                        <div class="category-link">
+                            Protein
+                            <div class="line"></div>
+                        </div>
+                    </div></a>
+
+                    <div class="card"><a href="menu.html">
+                        <div>
+                            <img src="assets/img/menu-2.jpg" alt="">
+                        </div>
+                        <div class="category-link">
+                            Grills
+                            <div class="line"></div>
+                        </div>
+                    </div></a>
+
+                    <div class="card"><a href="menu.html">
+                        <div>
+                            <img src="assets/img/menu-3.jpg " alt="">
+                        </div>
+                        <div class="category-link">
+                            Pastries
+                            <div class="line"></div>
+                        </div>
+                    </div></a>
+
+                    <div class="card"><a href="menu.html">
+                        <div>
+                            <img src="assets/img/menu-7.jpg" alt="">
+                        </div>
+                        <div class="category-link">
+                            Drinks
+                            <div class="line"></div>
+                        </div>
+                    </div></a>
+
+                    
                 </div>
             </div>
         </div>
@@ -443,33 +490,118 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="site-heading text-center">
                         <h3>Discover</h3>
-                        <h2>Our Menu</h2>
+                        <h2>FEATURED DISHES</h2>
                         <p>
-                            Order your delicious meals At Affordable Prices.    
+                            Order Our Trending Meals At Affordable Prices.    
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="food-menu-area">
-                <div class="row">
-                    <div class="col-md-12 text-center food-menu-content">
-                        <!-- <div class="mix-item-menu">
-                            <button class="active" data-filter="*">All</button>
-                            <button data-filter=".meals">Meals</button>
-                            <button data-filter=".swallow">Swallow</button>
-                            <button data-filter=".protein">Protein</button>
-                            <button data-filter=".pastries">Pastries</button>
-                            <button data-filter=".grills">grills</button>
-                            <button data-filter=".drinks">drinks</button>
-                        </div> -->
-                        <!-- End Mixitup Nav-->
+            
+            <div class="menu-category-holder">
+                <div class="arrow-container left">
+                    <i class="fa fa-angle-left"></i>
+                </div>
 
-                        <div class="row masonary">
-                            <div id="portfolio-grid" class="menu-flex col-2">
-                                
+                <div class="menu-arrow-container right">
+                    <i class="fa fa-angle-right"></i>
+                </div>
+
+                <div id="menu-category-container" class="menu-category-container">
+
+
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="assets/img/menu-6.jpg" alt="">
+                            <h4 class="price">₦1500</h4>
+                        </div>
+                        <div class="menu-category-link">
+                            <h3>Pounded Yam & Egusi</h3>
+                            <p>Pounded Yam with Vegetable Soup Rich and traditional flavors of Pounded Yam paired with luscious Egusi soup.
+                            </p>
+                            <div class="line"></div>
+                            <div class="button-container">
+                                <button class="side-cart">Add To Cart</button>
                             </div>
                         </div>
                     </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="assets/img/menu-5.jpg" alt="">
+                            <h4 class="price">₦1000</h4>
+                        </div>
+                        <div class="menu-category-link">
+                            <h3>Rice & Beans</h3>
+                            <p>A wholesome plate featuring a delicious combination of perfectly cooked rice, beans, golden plantains, and succulent beef.</p>
+                            <div class="line"></div>
+                            <div class="button-container">
+                                <button class="side-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="assets/img/menu-4.jpg" alt="">
+                            <h4 class="price">₦800</h4>
+                        </div>
+                        <div class="menu-category-link">
+                            <h3>Amala</h3>
+                            <p>Delight in the unique flavors of Amala, a Nigerian specialty. Savor the tender goodness of goat meat served with efo riro</p>
+                            <div class="line"></div>
+                            <div class="button-container">
+                                <button class="side-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <h4 class="price">₦4000</h4>
+                            <img src="assets/img/env-5.jpg" alt="">
+                        </div>
+                        <div class="menu-category-link">
+                            <h3>Chicken Burger</h3>
+                            <p>Elevate your burger experience with our Mega Sized Chicken Burger. Sink your teeth into a generous portion of succulent chicken</p>
+                            <div class="line"></div>
+                            <div class="button-container">
+                                <button class="side-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="assets/img/menu-10.jpg " alt="">
+                            <h4 class="price">₦1500</h4>
+                        </div>
+                        <div class="menu-category-link">
+                            <h3>Jollof Rice</h3>
+                            <p>Immerse yourself in the vibrant and aromatic world of Jollof Rice paired with juicy chicken cooked to perfection</p>
+                            <div class="line"></div>
+                            <div class="button-container">
+                                <button class="side-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="assets/img/env-2.jpg" alt="">
+                            <h4 class="price">₦500</h4>
+                        </div>
+                        <div class="menu-category-link">
+                            <h3>Ofada Rice</h3>
+                            <p>Experience the rich and authentic flavors of Ofada Rice served with grilled meats and vegetable stew.</p>
+                            <div class="line"></div>
+                            <div class="button-container">
+                                <button class="side-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
                 </div>
             </div>
         </div>
@@ -545,7 +677,7 @@
 
     <!-- Start Gallery
     ============================================= -->
-    <div class="gallery-area default-padding">
+    <!-- <div class="gallery-area default-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -562,65 +694,64 @@
                 <div class="row">
                     <div class="col-md-12 text-center food-menu-content">
                         <div class="row magnific-mix-gallery text-center masonary">
-                            <!-- Single Item -->
+                            
                             <div class="pf-item">
                                 <div class="item-effect">
                                     <img src="assets/img/env-1.jpg" alt="Thumb">
                                     <a href="assets/img/env-1.jpg" class="item popup-link"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
+
+                            
                             <div class="pf-item">
                                 <div class="item-effect">
                                     <img src="assets/img/env-4.jpg" alt="Thumb">
                                     <a href="assets/img/env-4.jpg" class="item popup-link"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
+                            
+                            
                             <div class="pf-item">
                                 <div class="item-effect">
                                     <img src="assets/img/env-3.jpg" alt="Thumb">
                                     <a href="assets/img/env-3.jpg" class="item popup-link"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
+                            
+                            
                             <div class="pf-item">
                                 <div class="item-effect">
                                     <img src="assets/img/env-6.jpg" alt="Thumb">
                                     <a href="assets/img/env-6.jpg" class="item popup-link"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
+                            
+                            
                             <div class="pf-item">
                                 <div class="item-effect">
                                     <img src="assets/img/env-5.jpg" alt="Thumb">
                                     <a href="assets/img/env-5.jpg" class="item popup-link"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
+                            
                             <div class="pf-item">
                                 <div class="item-effect">
                                     <img src="assets/img/env-2.jpg" alt="Thumb">
                                     <a href="assets/img/env-2.jpg" class="item popup-link"><i class="fa fa-plus"></i></a>
                                 </div>
                             </div>
-                            <!-- End Single Item -->
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Gallery -->
 
     <!-- Start Testimonials 
     ============================================= -->
-    <div class="testimonials-area bg-gray carousel-shadow default-padding">
+    <div class="testimonials-area carousel-shadow default-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -710,7 +841,7 @@
 
     <!-- Start Blog 
     ============================================= -->
-    <div class="blog-area default-padding">
+    <div style="background-color: #fdfdfd;" class="blog-area default-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
@@ -917,7 +1048,4 @@
     <script src="assets/js/cart.js"></script>
 
 </body>
-    <div id="progress">
-        <span id="progress-value">&#x1F815</span>
-    </div>
 </html>

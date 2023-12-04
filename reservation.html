@@ -48,7 +48,7 @@
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-    <!-- Header 
+   <!-- Header 
     ============================================= -->
     <header id="home">
 
@@ -56,7 +56,7 @@
         <nav class="navbar navbar-default fixed-border navbar-fixed white bootsnav">
             
             <!-- Start Top Search -->
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row">
                     <div class="top-search">
                         <div class="input-group">
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Top Search -->
             
             <div class="container">
@@ -77,11 +77,11 @@
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
-                        <li class="search"><a href="#"><i class="bi bi-search"></i></a></li>
+                        <!-- <li class="search"><a href="#"><i class="bi bi-search"></i></a></li> -->
                         <li class="side-cart"><a href="#"><i class="bi bi-bag"></i>
-                            <div class="cart-icon"><span>0</span></div>
+                            <div class="cart-icon"><span>3</span></div>
                         </a></li>
-                        <li class="quote-btn"><a href="reservation.html">Book a table</a></li>
+                        <li style class="quote-btn book-table"><a href="reservation.html">Book a table</a></li>
                     </ul>
                 </div>        
                 <!-- End Atribute Navigation -->
@@ -101,7 +101,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
-                        <li class="dropdown">
+                        <li>
                             <a href="index.html">Home</a>
                         </li>
                         <li>
@@ -112,7 +112,6 @@
                                 <li><a href="404.html">Error Page</a></li>
                             </ul> -->
                         </li>
-                        <!-- <li class="active"><a href="reservation.html">Reservation</a></li>  -->
                         <li>
                             <a href="menu.html">Menu</a>
                         </li>
@@ -143,8 +142,80 @@
                         </div>
                     </div>
                     <div class="cart-items-container">
-                        
+
+                        <div class="cart-items">
+                            <div class="item-Image-desc-price-container">
+                                <img src="assets/img/4.jpg">
+                                <div class="item-desc-price-container">
+                                    <p>Pounded Yam</p>
+                                    <h4>₦500</h4>
+                                </div>
+                            </div>
+                            <div class="item-add-itemPrice-reduce-remove-container">
+                                <div class="item-add-itemPrice-reduce-container">
+                                    <i style="cursor: pointer;" class="bi bi-dash-lg minus"></i>
+                                    <h4>1</h4>
+                                    <i style="cursor: pointer;" class="bi bi-plus-lg plus"></i>
+                                </div> 
+                                <div class="item-remove-container">
+                                    <i style="cursor: pointer; color:#ef4444;" class="bi bi-trash trash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-items">
+                            <div class="item-Image-desc-price-container">
+                                <img src="assets/img/5.jpg">
+                                <div class="item-desc-price-container">
+                                    <p>Burger</p>
+                                    <h4>₦1500</h4>
+                                </div>
+                            </div>
+                            <div class="item-add-itemPrice-reduce-remove-container">
+                                <div class="item-add-itemPrice-reduce-container">
+                                    <i style="cursor: pointer;" class="bi bi-dash-lg minus"></i>
+                                    <h4>1</h4>
+                                    <i style="cursor: pointer;" class="bi bi-plus-lg plus"></i>
+                                </div> 
+                                <div class="item-remove-container">
+                                    <i style="cursor: pointer; color:#ef4444;" class="bi bi-trash trash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-items">
+                            <div class="item-Image-desc-price-container">
+                                <img src="assets/img/1.jpg">
+                                <div class="item-desc-price-container">
+                                    <p>Spaghetti</p>
+                                    <h4>₦2500</h4>
+                                </div>
+                            </div>
+                            <div class="item-add-itemPrice-reduce-remove-container">
+                                <div class="item-add-itemPrice-reduce-container">
+                                    <i style="cursor: pointer;" class="bi bi-dash-lg minus"></i>
+                                    <h4>1</h4>
+                                    <i style="cursor: pointer;" class="bi bi-plus-lg plus"></i>
+                                </div> 
+                                <div class="item-remove-container">
+                                    <i style="cursor: pointer; color:#ef4444;" class="bi bi-trash trash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="total-container">
+                            <div class="total-price">
+                            <p>Total</p>
+                            <h4>₦2000</h4>
+                        </div>
+
+                        <div class="items-button-container">
+                            <button><a href="checkout.html">Proceed to Checkout</a></button>
+                            <button class="cancel-button" onclick="clearOrders()">Clear Orders</button>
+                        </div>
                     </div>
+
+                    
                 </div>   
             </div>
             <!-- End Cart Menu -->
@@ -154,7 +225,7 @@
 
     </header>
     <!-- End Header -->
-
+    
     <!-- Start Breadcrumb 
     ============================================= -->
     <div class="breadcrumb-area shadow text-center dark bg-fixed text-light" style="background-image: url(assets/img/reserve-table-2.jpg);">

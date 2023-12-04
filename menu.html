@@ -57,7 +57,7 @@
         <nav class="navbar navbar-default fixed-border navbar-fixed white bootsnav">
             
             <!-- Start Top Search -->
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row">
                     <div class="top-search">
                         <div class="input-group">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- End Top Search -->
             
             <div class="container">
@@ -78,11 +78,11 @@
                 <!-- Start Atribute Navigation -->
                 <div class="attr-nav">
                     <ul>
-                        <li class="search"><a href="#"><i class="bi bi-search"></i></a></li>
+                        <!-- <li class="search"><a href="#"><i class="bi bi-search"></i></a></li> -->
                         <li class="side-cart"><a href="#"><i class="bi bi-bag"></i>
-                            <div class="cart-icon"><span>0</span></div>
+                            <div class="cart-icon"><span>3</span></div>
                         </a></li>
-                        <li class="quote-btn"><a href="reservation.html">Book a table</a></li>
+                        <li style class="quote-btn book-table"><a href="reservation.html">Book a table</a></li>
                     </ul>
                 </div>        
                 <!-- End Atribute Navigation -->
@@ -102,7 +102,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
-                        <li class="dropdown">
+                        <li>
                             <a href="index.html">Home</a>
                         </li>
                         <li>
@@ -113,7 +113,6 @@
                                 <li><a href="404.html">Error Page</a></li>
                             </ul> -->
                         </li>
-                        <!-- <li><a href="reservation.html">Reservation</a></li>  -->
                         <li class="active">
                             <a href="menu.html">Menu</a>
                         </li>
@@ -144,8 +143,80 @@
                         </div>
                     </div>
                     <div class="cart-items-container">
-                        
+
+                        <div class="cart-items">
+                            <div class="item-Image-desc-price-container">
+                                <img src="assets/img/4.jpg">
+                                <div class="item-desc-price-container">
+                                    <p>Pounded Yam</p>
+                                    <h4>₦500</h4>
+                                </div>
+                            </div>
+                            <div class="item-add-itemPrice-reduce-remove-container">
+                                <div class="item-add-itemPrice-reduce-container">
+                                    <i style="cursor: pointer;" class="bi bi-dash-lg minus"></i>
+                                    <h4>1</h4>
+                                    <i style="cursor: pointer;" class="bi bi-plus-lg plus"></i>
+                                </div> 
+                                <div class="item-remove-container">
+                                    <i style="cursor: pointer; color:#ef4444;" class="bi bi-trash trash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-items">
+                            <div class="item-Image-desc-price-container">
+                                <img src="assets/img/5.jpg">
+                                <div class="item-desc-price-container">
+                                    <p>Burger</p>
+                                    <h4>₦1500</h4>
+                                </div>
+                            </div>
+                            <div class="item-add-itemPrice-reduce-remove-container">
+                                <div class="item-add-itemPrice-reduce-container">
+                                    <i style="cursor: pointer;" class="bi bi-dash-lg minus"></i>
+                                    <h4>1</h4>
+                                    <i style="cursor: pointer;" class="bi bi-plus-lg plus"></i>
+                                </div> 
+                                <div class="item-remove-container">
+                                    <i style="cursor: pointer; color:#ef4444;" class="bi bi-trash trash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart-items">
+                            <div class="item-Image-desc-price-container">
+                                <img src="assets/img/1.jpg">
+                                <div class="item-desc-price-container">
+                                    <p>Spaghetti</p>
+                                    <h4>₦2500</h4>
+                                </div>
+                            </div>
+                            <div class="item-add-itemPrice-reduce-remove-container">
+                                <div class="item-add-itemPrice-reduce-container">
+                                    <i style="cursor: pointer;" class="bi bi-dash-lg minus"></i>
+                                    <h4>1</h4>
+                                    <i style="cursor: pointer;" class="bi bi-plus-lg plus"></i>
+                                </div> 
+                                <div class="item-remove-container">
+                                    <i style="cursor: pointer; color:#ef4444;" class="bi bi-trash trash"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="total-container">
+                            <div class="total-price">
+                            <p>Total</p>
+                            <h4>₦2000</h4>
+                        </div>
+
+                        <div class="items-button-container">
+                            <button><a href="checkout.html">Proceed to Checkout</a></button>
+                            <button class="cancel-button" onclick="clearOrders()">Clear Orders</button>
+                        </div>
                     </div>
+
+                    
                 </div>   
             </div>
             <!-- End Cart Menu -->
@@ -177,8 +248,160 @@
     <!-- Start Food Menu
     ============================================= -->
     <div style="background-color: #f4f4f4;" class="food-menu-area inc-isotop default-padding">
-        <div class="container">
-            
+        <div class="menu">
+            <div class="categories" id="categories">
+                <h2>Categories <span style="float: right;" class="toggle-arrow"><i class="bi bi-caret-down"></i></span></h2>
+
+                <div class="category" id="category-details">
+                    <li>Breakfast</li>
+                    <li>Swallow</li>
+                    <li>Protein</li>
+                    <li>Grills</li>
+                    <li>Pastries</li>
+                    <li>Drinks</li>
+                    <li>Brunch</li>
+                    <li>Vegetarian</li>
+                    <li>Seafood</li>
+                    <li>Desserts</li>
+                    <li>Soups</li>
+                    <li>Sandwiches</li>
+                    <li>Sides</li>
+                    <li>Salads</li>
+                    <li>Asian Cuisine</li>
+                    <li>Italian</li>
+                    <li>Mexican</li>
+                    <li>Smoothies</li>
+                    <li>Cocktails</li>
+                    <li>Juices</li>
+                    <li>Gluten-Free</li>
+                    <li>Vegan</li>
+                    <li>Low-Carb</li>
+                </div>
+            </div>
+
+            <div class="dishes">
+                <div class="header">
+                    <h2 class="menu-header">Dishes</h2>
+
+                    <div class="sort-container">
+                        <h2>Sort: </h2>
+                        <div class="select-container">
+                            <select class="select">
+                                <option value="">Default</option>
+                                <option value="">Popularity</option>
+                                <option value="">Name(A-Z)</option>
+                                <option value="">Name(Z-A)</option>
+                                <option value="">Price: Low to High</option>
+                                <option value="">Price: High to Low</option>
+                                <option value="">Rating: Highest to Low</option>
+                                <option value="">Rating: Lowest</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MENU -->
+
+                <div class="menu-container">
+
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="assets/img/menu-6.jpg" alt="">
+                            <h4 class="price">₦1500</h4>
+                        </div>
+                        <div class="menu-category-link">
+                            <h3>Pounded Yam & Egusi</h3>
+                            <p>Pounded Yam with Vegetable Soup Rich and traditional flavors of Pounded Yam paired with luscious Egusi soup.
+                            </p>
+                            <div class="line"></div>
+                            <div class="button-container">
+                                <button class="side-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="assets/img/menu-5.jpg" alt="">
+                            <h4 class="price">₦1000</h4>
+                        </div>
+                        <div class="menu-category-link">
+                            <h3>Rice & Beans</h3>
+                            <p>A wholesome plate featuring a delicious combination of perfectly cooked rice, beans, golden plantains, and succulent beef.</p>
+                            <div class="line"></div>
+                            <div class="button-container">
+                                <button class="side-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="assets/img/menu-4.jpg" alt="">
+                            <h4 class="price">₦800</h4>
+                        </div>
+                        <div class="menu-category-link">
+                            <h3>Amala</h3>
+                            <p>Delight in the unique flavors of Amala, a Nigerian specialty. Savor the tender goodness of goat meat served with efo riro</p>
+                            <div class="line"></div>
+                            <div class="button-container">
+                                <button class="side-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <h4 class="price">₦4000</h4>
+                            <img src="assets/img/env-5.jpg" alt="">
+                        </div>
+                        <div class="menu-category-link">
+                            <h3>Chicken Burger</h3>
+                            <p>Elevate your burger experience with our Mega Sized Chicken Burger. Sink your teeth into a generous portion of succulent chicken</p>
+                            <div class="line"></div>
+                            <div class="button-container">
+                                <button class="side-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="assets/img/menu-10.jpg " alt="">
+                            <h4 class="price">₦1500</h4>
+                        </div>
+                        <div class="menu-category-link">
+                            <h3>Jollof Rice</h3>
+                            <p>Immerse yourself in the vibrant and aromatic world of Jollof Rice paired with juicy chicken cooked to perfection</p>
+                            <div class="line"></div>
+                            <div class="button-container">
+                                <button class="side-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-card">
+                        <div class="menu-card-img">
+                            <img src="assets/img/env-2.jpg" alt="">
+                            <h4 class="price">₦500</h4>
+                        </div>
+                        <div class="menu-category-link">
+                            <h3>Ofada Rice</h3>
+                            <p>Experience the rich and authentic flavors of Ofada Rice served with grilled meats and vegetable stew.</p>
+                            <div class="line"></div>
+                            <div class="button-container">
+                                <button class="side-cart">Add To Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="view-more-button">
+                    <button>View More</button>
+                </div>
+
+            </div>
         </div>
     </div>
     <!-- End Food Menu -->
@@ -273,7 +496,6 @@
     <script src="assets/js/YTPlayer.min.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/get-cart-from-localstorage.js"></script>
 
 </body>
 </html>

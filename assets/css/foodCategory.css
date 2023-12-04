@@ -1,76 +1,76 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+.category-holder{
+    position: relative;
 }
-.menu{
-    width: 95%;
-    margin: 0 auto;
+.category-container{
+    z-index: 2;
+    width: 100%;
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: 3rem;
+    overflow-x: scroll;
 }
-.categories{
-    height: 100%;
-    flex-basis: 20%;
-    background-color: white;
-    padding: 1rem 1rem 1rem 2rem;
-    border-radius: 0.7rem;
-    list-style-type: none;
+.category-container::-webkit-scrollbar{
+    width: 0px;
+  }
+.category-container .card{
+    z-index: 2;
+    background-color: #f2f2f2;
+    flex-shrink: 0;
+    padding-bottom: 2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    cursor: pointer;
 }
-.categories li:hover{
-    color: #e7272d;
+.category-container .card img{
+    z-index: 2;
+    width: 300px;
+    height: 230px;
+    object-fit: cover;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
 }
-.categories h2 , .sort-container h2{
-    font-size: 1.8rem;
-}
-
-.dishes{
-    flex-basis: 80%;
+.category-link{
+    position: relative;
+    width: 90%;
+    margin: 1rem auto;
     background-color: white;
     padding: 1rem;
-    border-radius: 0.7rem;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
 }
-.dishes .header{
+.line{
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    left: 43%;
+    background-color: #e7272d;
+}
+.arrow-container{
+    position: absolute;
+    z-index: 5;
+    background-color: white;
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.3rem;
-}
-.sort-container{
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    width: 25rem;
-}
-.select-container{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-.select-container select{
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    padding: 0px;
-    margin: 0;
-    font-size: 16px;
     cursor: pointer;
-    width: 350px;
 }
-.dishes h2{
-    font-size: 1.8rem;
+.left{
+    top: 35%;
+    left: -2.2rem;
 }
-.menu-container{
-    width: 98%;
-    margin: 0 auto;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr;
+.right{
+    top: 35%;
+    right: -2.2rem;
 }
 
+
+/* HOME-MENU CATEGORY */
 .menu-category-holder{
     position: relative;
 }
@@ -175,76 +175,35 @@
     /* color: #666; */
     padding: 0.7rem 3rem;
 }
-.view-more-button{
+
+
+/* QUICK HOME PAGE ABOUT STYLE */
+.address ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.address .line{
+    left: 0;
+}
+.location h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.location ul{
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+.location ul .li{
+    width: 100%;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-.view-more-button button{
-    outline: none;
-    background-color: #e7272d;
-    border: none;
-    color: #fff;
-    border-radius: 0.6rem;
-    padding: 0.7rem 3rem;
-}
-.toggle-arrow{
-    display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 600px) {
-    .menu-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Responsive layout for desktop and above */
-@media screen and (min-width: 992px) {
-    .menu-container{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media(max-width:768px) {
-    .menu{
-      flex-direction: column;
-    }
-    .categories{
-        flex-basis: 100%;
-    }
-    .dishes{
-        flex-basis: 100%;
-    } 
-    .toggle-arrow{
-        display: block;
-    }
-    /* Hide the details by default */
-    .category {
-        display: none;
-        transition: display 0.3s ease;
-    }
-
-    /* Show the details when the arrow is clicked */
-    #categories.active .category {
-        display: block;
-    }
-
-
+.location ul .li span{
+    font-weight: 700;
+    color: #222;
 }
